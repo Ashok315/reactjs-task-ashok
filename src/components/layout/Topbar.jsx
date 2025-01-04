@@ -7,19 +7,21 @@ import React from 'react'
     };
      
   return (
-    <div className='flex justify-end md:justify-between gap-[7px] items-center px-[45px]'>
+    <div className='flex justify-end md:justify-between gap-[7px] items-center md:px-[20px]'>
 
-         {/*Menu bar  */}
-         <div onClick={toggleState} className='lg:ml-[16%] md:ml-[5%] cursor-pointer'>
-                     <img src="/menuBarIcon.svg" alt=""  width="22px"/>
+         <div className='flex items-center justify-start gap-10 md:gap-[30px] md:ml-[16.8%]'>
+               {/*Menu bar  */}
+               <div onClick={toggleState} className='cursor-pointer'>
+                  <img src="/menuBarIcon.svg" alt=""  width="22px"/>
+               </div>
+
+               {/* search button */}
+               <div className='relative mr-[20px]'>
+                     <input type="text" className='text-[14px] w-full ring-1 ring-lightgray py-[6px] ps-[30px] pe-[12px] rounded-sm outline-none' placeholder='Search'/>
+                     <img  src="/searchIcon.svg" alt="" width="13px" className='absolute ml-[10px] top-[50%] -translate-y-1/2' />
+               </div>
          </div>
-
-        {/* search button */}
-        <div className='lg:mr-[40%] relative'>
-            <input type="text" className='text-[14px] w-full ring-1 ring-lightgray py-[6px] ps-[30px] pe-[12px] rounded-sm outline-none' placeholder='Search'/>
-             <img  src="/searchIcon.svg" alt="" width="13px" className='absolute ml-[10px] top-[50%] -translate-y-1/2' />
-        </div>
-        
+  
         {/* user-section */}
         <div className='flex justify-between items-center gap-[21px]'>
              

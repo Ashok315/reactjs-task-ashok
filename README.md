@@ -1,3 +1,11 @@
+# React Js Frontend Task - Ashok
+
+## Live Demo
+
+You can view the live app here:
+
+👉 **[Open the App](https://reactjs-task-ashok.netlify.app/)** 👈
+
 ## Run Local environment
 
 1. Clone the repository:

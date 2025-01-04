@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        dmSans: ['DM Sans', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
       colors:{
         primary: {
           DEFAULT: "#0084CA",
@@ -26,6 +31,7 @@ export default {
         green:"#18AC00",
         offwhite:"#F2F6F9"
       }
+
     },
   },
   plugins: [],

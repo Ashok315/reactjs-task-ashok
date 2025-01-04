@@ -71,17 +71,17 @@ const SkillRatings = () => {
          <>
              {ratings.map((rating, index) => (
             
-            <div key={index} className="flex items-center justify-start mb-5 gap-[26px]">
-                <div className="flex-shrink-0 text-gray-700 text-[15px]">{rating.name}</div>
+            <div key={index} className="md:flex text-center items-center justify-start mb-5 gap-[26px]">
+                <div className="flex-shrink-0 text-gray-700 text-[15px] font-poppins">{rating.name}</div>
 
                 <div className="relative flex-1 mx-4 h-1 bg-lightgray rounded-md z-30">
                     <div
-                    className="absolute top-0 left-0 h-full bg-secondary rounded-full"
-                    style={{ width: `${(rating.score / rating.max) * 100}%` }}
+                        className="absolute top-0 left-0 h-full bg-secondary rounded-full"
+                        style={{ width: `${(rating.score / rating.max) * 100}%` }}
                     ></div>
                 </div>
                 
-                <div className="flex-shrink-0 text-gray-500 text-sm">
+                <div className="md:flex-shrink-0 text-gray-500 text-sm">
                     {rating.score}/{rating.max}
                 </div>
             </div>

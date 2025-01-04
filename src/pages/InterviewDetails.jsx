@@ -58,7 +58,7 @@ const InterviewDetails = () => {
           <div className="my-10 p-[24px] ">
               {displayStepContent(currentStep)}
           </div>
-          
+           
           {/* navigation button */}
           {currentStep !== steps.length && (
             <StepperControl

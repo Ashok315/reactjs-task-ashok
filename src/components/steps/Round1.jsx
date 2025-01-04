@@ -8,7 +8,7 @@ const Round1 = () => {
     <div>
        
        {/* Interview round rating details */}
-        <div  className='feedback-section border-t border-lightgray'>
+        <div  className='feedback-section border-t border-lightgray mt-5 md:mt-0'>
 
              {/* Feedback Section */}
             <div className='flex justify-between px-[30px] py-[20px] border-b-[1.5px] border-dashed border-lightgray'>
@@ -21,7 +21,7 @@ const Round1 = () => {
                     </div>
             </div>
 
-            <div className="flex justify-between py-[30px] px-[30px] gap-[50px] border-b-[1.5px] border-dashed border-lightgray">
+            <div className="flex flex-col md:flex-row justify-between py-[30px] px-[30px] gap-[50px] border-b-[1.5px] border-dashed border-lightgray">
                 <div className="feedback-given flex basis-1/2 justify-between items-center px-[40px] py-[17px]">
                     <div className="text-sm text-primary-dark font-semibold">Feedback Given</div>
                     <div className="text-[36px] font-semibold text-secondary">2/2</div>  

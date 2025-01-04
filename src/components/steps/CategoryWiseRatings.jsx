@@ -57,7 +57,11 @@ const CategoryWiseRatings = () => {
 
   return (
     <div className="px-[30px] pt-[28px] pb-[30px]">
-      <div className="text-sm text-primary-dark font-semibold">Categories Wise Ratings</div>
+      
+      <div className="flex justify-between items-center gap-[10px]">
+            <div className="text-sm text-primary-dark font-semibold">Categories Wise Ratings</div>
+            <button className="cursor-pointer text-[10px] rounded-md bg-secondary py-[4px] px-[20px] font-semibold  text-white">Edit</button>
+      </div>
    
       <div>
         {ratings.map((person, index) => (
@@ -70,13 +74,13 @@ const CategoryWiseRatings = () => {
             </div>
 
             {isExpanded[index]&&
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid md:grid-cols-2 gap-4">
                 {person.categories.map((category, idx) => (
                   <div
                     key={idx}
-                    className="flex flex-col space-y-2  pt-2"
+                    className="flex flex-col space-y-2 pt-2"
                   >
-                    <span className="text-[15px]">
+                    <span className="text-[15px] font-poppins">
                       {category.label}
                     </span>
                     <div className="flex items-center space-x-2">

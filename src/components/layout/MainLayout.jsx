@@ -29,12 +29,12 @@ const MainLayout = () => {
             ?
               <>        
                   {/* left-section */}
-                  <aside className='w-full hidden md:block md:w-[19%] lg:w-[17%]  border border-lightgray py-[47px] px-[27px] md:px-[10px] lg:px-[27px] relative'>
-                          <Sidebar></Sidebar>
+                  <aside className='md:w-[19%] lg:w-[17%] border border-lightgray py-[47px] px-[27px] md:px-[10px] lg:px-[27px] relative'>
+                          <Sidebar isToggled={menuToggle}></Sidebar>
                   </aside>
           
                   {/* right-section */}
-                  <main className='md:w-[81%] lg:w-[83%] pt-[30px] md:pt-[41px] px-[20px] py-[75px]'> 
+                  <main className='w-full md:w-[81%] lg:w-[83%] pt-[30px] md:pt-[41px] px-[20px] py-[75px]'> 
                      <div className='main-wrapper min-h-[70vh]'>
                           <Outlet></Outlet>
                      </div>

@@ -46,13 +46,13 @@ export const Sidebar = () => {
 
 
   return (
-       <nav className='sidebar capitalizestext-[14px] md:text-[12px] lg:text-[15px]'>
+       <nav className='sidebar capitalize text-[14px] md:text-[12px] lg:text-[14px]'>
            <ul>
               {navItems.map((item)=>(
                 <li key={item.label} className='mb-[17px]'>
                     <NavLink to={item.path} className={`flex items-center gap-[12px] text-gray ${ isActiveParent(item)?"text-primary":""}`}>
                         {item.icon}
-                        <div>{item.label}</div>
+                        <div className='hidden md:block font-inter'>{item.label}</div>
                     </NavLink>
                 </li>
               ))}       

@@ -73,7 +73,7 @@ const Stepper = ({ steps, currentStep }) => {
             : "flex items-center"
         }
       >
-        <div className="relative flex flex-col items-center text-darkslate font-bold">
+        <div className="relative flex flex-col items-center text-darkslate font-poppins font-semibold">
           <div className={`rounded-md bg-slate transition duration-500 ease-in-out h-[40px] w-[40px] flex items-center justify-center py-3  ${
               step.selected
                 ? "!bg-lightslate text-secondary-light"
@@ -85,7 +85,7 @@ const Stepper = ({ steps, currentStep }) => {
           </div>
 
           <div
-            className={`absolute top-0 text-[13px] lg:text-[14px]  text-center mt-[56px] w-28 lg:w-36 font-medium ${
+            className={`absolute top-0 text-[13px] lg:text-[14px]  text-center mt-[56px] lg:w-32 ${
               step.highlighted||step.completed? "!text-secondary-light" : "text-darkslate"
             }`}
           >
