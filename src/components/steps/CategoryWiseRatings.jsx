@@ -85,7 +85,7 @@ const CategoryWiseRatings = () => {
                     </span>
                     <div className="flex items-center space-x-2">
                       <div className="flex space-x-1">{renderStars(category.stars)}</div>
-                      <span className="text-sm">
+                      <span>
                         {category.remark}
                       </span>
                     </div>

@@ -10,6 +10,31 @@ const SkillRatings = () => {
     { name: "Communication and Interpersonal Skills", score: 2, max: 5 },
   ];
 
+  const ratingRemarks=[
+    {
+      score:1,
+      remark:"poor"
+    },
+    {
+      score:2,
+      remark:"poor+"
+    },
+    {
+      score:3,
+      remark:"good"
+    },
+    {
+      score:4,
+      remark:"very good"
+    },
+    {
+      score:5,
+      remark:"excellent"
+
+    }
+
+  ]
+
   // Calculate the overall rating
 
   const calculateOverallRating = () => {
@@ -18,7 +43,7 @@ const SkillRatings = () => {
     return (totalScore / maxScore) * 5;
   };
 
-  const overallRating = calculateOverallRating().toFixed(1);
+  const overallRating = Math.floor(calculateOverallRating().toFixed(1));
 
   const renderStars = (rating) => {
     const stars = [];
@@ -52,8 +77,23 @@ const SkillRatings = () => {
         <div className="mb-6">
             <div className="text-sm text-primary-dark font-semibold">Overall Ratings</div>
             <div className="flex items-center mt-2">
-                 <div className="text-[30px] md:[36px] font-semibold pr-[14px]">{overallRating} / 5</div> 
+                 <div className="text-[32px] md:text-[40px] font-medium pr-[14px]">{overallRating}/5</div> 
                 {renderStars(overallRating)}  
+                
+                {ratingRemarks.map((item)=>{          
+                  if(item===overallRating){
+                     return (
+                        <div className="capitalize">
+                            {item.remark}
+                         </div>
+                     )}
+                  }
+                 )}
+                 
+                 {ratingRemarks.map((item,index)=>
+                     item.score===overallRating?<div key={index} className="capitalize ml-5">{item.remark}</div>:""
+                )}
+                
             </div>
            
             <div className="flex items-center justify-between mb-4">
