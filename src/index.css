@@ -26,3 +26,31 @@ input::placeholder {
 .feedback-pending {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
+
+.tablinks{
+  font-weight: 500;
+  font-family: "DM Sans", sans-serif;
+}
+.tablinks .active{
+  position: relative;
+ 
+}
+.tablinks .active::after{
+  content: "";
+  position:absolute;
+  width: 50px;
+  height: 2px;
+  /* top:1.86rem; */
+  bottom:-67.2%;
+  right:50%;
+  border-radius: 2rem;
+  text-align: center;
+  transform: translateX(50%);
+  background-color: #0084CA;
+}
+
+@media (max-width: 768px) { 
+  .tablinks .active::after{
+    display: none;
+  }
+}

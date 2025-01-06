@@ -52,7 +52,7 @@ export const Sidebar = ({isToggled}) => {
                 <li key={item.label} className='mb-[17px]'>
                     <NavLink to={item.path} className={`flex items-center ${isToggled&& "justify-center"} gap-[12px] text-gray ${ isActiveParent(item)?"text-primary":""}`}>
                         <div className={`${isToggled?"block":"hidden"} md:block`}>{item.icon}</div>
-                        <div className={`${isToggled?"md:hidden":"md:block"} hidden font-inter text-nowrap`}>{item.label}</div>
+                        <div className={`${isToggled?"md:hidden":"md:block"} hidden font-inter text-nowrap font-medium`}>{item.label}</div>
                     </NavLink>
 
 
