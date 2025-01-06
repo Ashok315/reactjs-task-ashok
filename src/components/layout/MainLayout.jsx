@@ -26,7 +26,7 @@ const MainLayout = () => {
             menuToggle
               ? 'w-[15%] md:w-[10%] lg:w-[7%]'
               : 'hidden md:block md:w-[20%] lg:w-[18.5%]'
-          } border border-lightgray py-[47px] px-[14px] md:px-[10px] lg:px-[24px]`}
+          } border border-lightgray py-[47px] px-[14px] md:px-[10px] lg:px-[24px] overflow-y-auto`}
         >
           <Sidebar isToggled={menuToggle} />
         </aside>
@@ -37,7 +37,7 @@ const MainLayout = () => {
             menuToggle
               ? "w-[85%] md:w-[90%] lg:w-[93%]"
               : 'w-full md:w-[80%] lg:w-[81.5%]'
-          } flex-1 pt-[30px] md:pt-[41px] px-[20px] py-[75px]`}
+          } flex-1 pt-[30px] md:pt-[41px] px-[20px] py-[75px] overflow-y-auto`}
         >
           <div className="main-wrapper min-h-[70vh]">
             <Outlet />
