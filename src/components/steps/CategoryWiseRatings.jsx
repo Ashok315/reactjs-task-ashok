@@ -80,7 +80,7 @@ const CategoryWiseRatings = () => {
                     key={idx}
                     className="flex flex-col space-y-2 pt-2"
                   >
-                    <span className="text-[15px] font-poppins">
+                    <span className="text-[13px] md:text-[15px] font-poppins">
                       {category.label}
                     </span>
                     <div className="flex items-center space-x-2">

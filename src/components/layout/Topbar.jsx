@@ -7,9 +7,9 @@ import React from 'react'
     };
      
   return (
-    <div className='flex justify-end md:justify-between gap-[7px] items-center md:px-[20px]'>
+    <div className='flex justify-between md:justify-between gap-[7px] items-center md:px-[20px] px-[15px]'>
 
-         <div className='flex items-center justify-start gap-8 md:gap-[25px] md:ml-[16.8%]'>
+         <div className='flex items-center justify-start gap-5  md:gap-[25px] md:ml-[19.2%]'>
                {/*Menu bar  */}
                <div onClick={toggleState} className='cursor-pointer'>
                   <img src="/menuBarIcon.svg" alt=""  width="22px"/>
@@ -23,7 +23,7 @@ import React from 'react'
          </div>
   
         {/* user-section */}
-        <div className='flex justify-between items-center gap-[18px] px-[14px]'>
+        <div className='flex justify-between items-center gap-[18px]'>
              
              <div className='cursor-pointer hidden md:block'>
                 <img src="/helpIcon.svg" width="18px" alt="" />
@@ -37,7 +37,7 @@ import React from 'react'
                 <img src="/profileImage.svg" alt="" />
              </div>
 
-             <div className='leading-4 cursor-pointer'>
+             <div className='leading-4 cursor-pointer hidden md:block'>
                   <p className='user-name text-wrap font-semibold text-[12px] md:text-[14px] capitalize'>Aarohi Shah</p>
                   <p className='created-date text-gray text-[10px] md:text-[12px]'>Applicant</p>
             </div> 

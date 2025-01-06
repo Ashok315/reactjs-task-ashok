@@ -1,76 +1,62 @@
-import React, { useState } from 'react'
-import { Outlet } from 'react-router-dom'
-import Topbar from './Topbar'
+import React, {useState } from 'react';
+import { Outlet } from 'react-router-dom';
+import Topbar from './Topbar';
 import Sidebar from './Sidebar';
 
-
 const MainLayout = () => {
-  const [menuToggle,setMenuToggle]=useState(false);
+  const [menuToggle, setMenuToggle] = useState(false);
 
-  // handle menu toggle
   const handleToggle = (newState) => {
-    setMenuToggle(newState);  
+    setMenuToggle(newState);
   };
 
   return (
+    <div className="flex flex-col h-screen">
+      {/* Header */}
+      <header className="fixed w-full border border-lightgray z-40 bg-white py-[15px]">
+        <Topbar isToggled={menuToggle} onToggle={handleToggle} />
+      </header>
 
-    <div>
+      {/* Main Content Area */}
+      <div className="flex flex-1 pt-[55px] md:pt-[45px] relative">
 
-         {/* header */}
-        <header className='fixed w-full border border-lightgray z-40 bg-white py-[15px]'>
-              <Topbar isToggled={menuToggle} onToggle={handleToggle}></Topbar>
-        </header>
-           
-         {/* Main Content Area */}
-        <div className='flex min-h-screen relative pt-[55px] md:pt-[45px]'> 
-          {/* check menu opened or not */}
-            {
-            !menuToggle
-            ?
-              <>        
-                  {/* left-section */}
-                  <aside className='md:w-[19%] lg:w-[17%] border border-lightgray py-[47px] px-[27px] md:px-[10px] lg:px-[27px] relative'>
-                          <Sidebar isToggled={menuToggle}></Sidebar>
-                  </aside>
-          
-                  {/* right-section */}
-                  <main className='w-full md:w-[81%] lg:w-[83%] pt-[30px] md:pt-[41px] px-[20px] py-[75px]'> 
-                     <div className='main-wrapper min-h-[70vh]'>
-                          <Outlet></Outlet>
-                     </div>
+        {/* Sidebar */}
+        <aside
+          className={`${
+            menuToggle
+              ? 'w-[15%] md:w-[10%] lg:w-[7%]'
+              : 'hidden md:block md:w-[20%] lg:w-[18.5%]'
+          } border border-lightgray py-[47px] px-[14px] md:px-[10px] lg:px-[24px]`}
+        >
+          <Sidebar isToggled={menuToggle} />
+        </aside>
 
-                     <div className='flex justify-end gap-[30px] px-[36px] border-b border-lightgray pb-[34px] -mb-3'>
-                        <div className='cursor-pointer'>
-                            <img className='bg-primary-lighter p-[12px] rounded-md' src="/chatIcon.svg" alt="" />
-                        </div>
-                     </div>
-                      
-                 </main>
-              </>
-            :
-              <>
-              
-                  {/* right-section */}
-                  <main className='w-full pt-[30px] md:pt-[41px] px-[20px] py-[75px]'> 
-                     <div className='main-wrapper min-h-[70vh]'>
-                          <Outlet></Outlet>
-                     </div>
+        {/* Main Content */}
+        <main
+          className={`transition-all duration-300${
+            menuToggle
+              ? "w-[85%] md:w-[90%] lg:w-[93%]"
+              : 'w-full md:w-[80%] lg:w-[81.5%]'
+          } flex-1 pt-[30px] md:pt-[41px] px-[20px] py-[75px]`}
+        >
+          <div className="main-wrapper min-h-[70vh]">
+            <Outlet />
+          </div>
 
-                     <div className='flex justify-end gap-[30px] px-[36px] border-b border-lightgray pb-[34px] -mb-3'>
-                        <div className='cursor-pointer'>
-                            <img className='bg-primary-lighter p-[12px] rounded-md' src="/chatIcon.svg" alt="" />
-                        </div>
-                     </div>
-                      
-                 </main>
-                  
-              </>
-            }
-          
-        </div>
+          <div className="flex justify-end gap-[30px] px-[36px] border-b border-lightgray pb-[34px] -mb-3">
+            <div className="cursor-pointer">
+              <img
+                className="bg-primary-lighter p-[12px] rounded-md"
+                src="/chatIcon.svg"
+                alt="Chat Icon"
+              />
+            </div>
+          </div>
+        </main>
+      </div>
     </div>
-    
-  )
-}
+  );
+};
 
-export default MainLayout
+export default MainLayout;
+

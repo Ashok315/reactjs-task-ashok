@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavLink, useLocation } from 'react-router-dom';
 
-export const Sidebar = () => {
+export const Sidebar = ({isToggled}) => {
 
     // nav items data
     const navItems=[
@@ -50,10 +50,12 @@ export const Sidebar = () => {
            <ul>
               {navItems.map((item)=>(
                 <li key={item.label} className='mb-[17px]'>
-                    <NavLink to={item.path} className={`flex items-center gap-[12px] text-gray ${ isActiveParent(item)?"text-primary":""}`}>
-                        {item.icon}
-                        <div className='hidden md:block font-inter'>{item.label}</div>
+                    <NavLink to={item.path} className={`flex items-center ${isToggled&& "justify-center"} gap-[12px] text-gray ${ isActiveParent(item)?"text-primary":""}`}>
+                        <div className={`${isToggled?"block":"hidden"} md:block`}>{item.icon}</div>
+                        <div className={`${isToggled?"md:hidden":"md:block"} hidden font-inter text-nowrap`}>{item.label}</div>
                     </NavLink>
+
+
                 </li>
               ))}       
            </ul>         

@@ -85,7 +85,7 @@ const Stepper = ({ steps, currentStep }) => {
           </div>
 
           <div
-            className={`absolute top-0 text-[13px] lg:text-[14px]  text-center mt-[56px] lg:w-32 ${
+            className={`absolute top-0 text-[12px] lg:text-[14px]  text-center mt-[56px] lg:w-32 ${
               step.highlighted||step.completed? "!text-secondary-light" : "text-darkslate"
             }`}
           >
@@ -104,7 +104,7 @@ const Stepper = ({ steps, currentStep }) => {
   });
 
   return (
-    <div className="px-[50px] md:px-[80px] lg:px-[96px] pt-[50px] pb-[36px] flex justify-between items-center">
+    <div className="px-[30px] md:px-[80px] lg:px-[96px] pt-[50px] pb-[36px] flex justify-between items-center">
       {stepsDisplay}
     </div>
   );

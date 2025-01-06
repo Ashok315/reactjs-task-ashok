@@ -52,7 +52,7 @@ const SkillRatings = () => {
         <div className="mb-6">
             <div className="text-sm text-primary-dark font-semibold">Overall Ratings</div>
             <div className="flex items-center mt-2">
-                 <div className="text-[36px] font-semibold pr-[14px]">{overallRating} / 5</div> 
+                 <div className="text-[30px] md:[36px] font-semibold pr-[14px]">{overallRating} / 5</div> 
                 {renderStars(overallRating)}  
             </div>
            
@@ -72,9 +72,9 @@ const SkillRatings = () => {
              {ratings.map((rating, index) => (
             
             <div key={index} className="md:flex text-center items-center justify-start mb-5 gap-[26px]">
-                <div className="flex-shrink-0 text-gray-700 text-[15px] font-poppins">{rating.name}</div>
+                <div className="flex-shrink-0 text-gray-700 text-[13px] md:text-[15px] font-poppins">{rating.name}</div>
 
-                <div className="relative flex-1 mx-4 h-1 bg-lightgray rounded-md z-30">
+                <div className="relative flex-1 mx-4 h-1 bg-lightgray rounded-md z-30 my-[6px] md:my-0">
                     <div
                         className="absolute top-0 left-0 h-full bg-secondary rounded-full"
                         style={{ width: `${(rating.score / rating.max) * 100}%` }}
